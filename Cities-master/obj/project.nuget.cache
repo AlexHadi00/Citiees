@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "HIHLkNaL4yupYF26fFhfgn64VpTJw6DpdXyu0k0DZfDJRhori4VVG4Cu5dZtV2NjXXGXEkCQk3OxcM0Nyuz1vQ==",
+  "dgSpecHash": "gkTSI7w7V9L6mcc7i6NNKbEEpF1sxdzyhLYTuhjbJvKYyf5wyCHHs6DcJOU5QWviMFbm7guFqj8WGqjnRe+QzQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\G\\source\\repos\\Citiees\\Cities-master\\Cities.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\G\\.nuget\\packages\\microsoft.aspnet.cors\\5.2.9\\microsoft.aspnet.cors.5.2.9.nupkg.sha512",
     "C:\\Users\\G\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",
     "C:\\Users\\G\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\G\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",
@@ -173,5 +174,16 @@
     "C:\\Users\\G\\.nuget\\packages\\system.xml.xpath\\4.3.0\\system.xml.xpath.4.3.0.nupkg.sha512",
     "C:\\Users\\G\\.nuget\\packages\\system.xml.xpath.xdocument\\4.3.0\\system.xml.xpath.xdocument.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.Cors 5.2.9' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.Cors",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

@@ -1,5 +1,6 @@
 var builder = WebApplication.CreateBuilder(args);
 
+
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -23,7 +24,6 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
-
 public class City
 {
     public string? Name { get; set; }
@@ -47,28 +47,31 @@ namespace YourNamespace
             // Enable CORS
             services.AddCors(options =>
             {
-                options.AddDefaultPolicy(builder =>
+                options.AddPolicy("MyPolicy", builder =>
                 {
                     builder.AllowAnyOrigin()
                            .AllowAnyMethod()
-                           .AllowAnyHeader();
+                           .AllowAnyHeader()
+                           .AllowCredentials(); 
                 });
             });
-
-            // Add controllers
-            services.AddControllers();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+
+            app.UseCors("MyPolicy");
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseCors();
+            app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
